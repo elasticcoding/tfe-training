@@ -25,13 +25,13 @@ provider "aws" {
 }
 
 module "keypair" {
-  source = "../key-pair"
+  source = "./key-pair"
 
 }
 
 module "server" {
   depends_on = [module.keypair]
-  source = "../server"
+  source = "./server"
   servers = var.servers
   identity = var.identity
   key     = module.keypair.keypair
