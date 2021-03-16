@@ -46,6 +46,3 @@ output "public_dns" {
   value = module.server.public_dns
 }
 
-output "ami-id" {
-  value = data.aws_ami.ubuntu_16_04.image_id
-}
